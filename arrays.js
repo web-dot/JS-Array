@@ -38,10 +38,31 @@ console.log(searchedArray.at(-2), " -> returns d, the second last element");
 let spliceArray = ["1","2","3","4","5"];
 console.log(spliceArray.splice(1,3,"a","b","c","d"));
 
-// indexOf()
-const a = ["a","b","c","d","e"];
+// indexOf() - searches the array for searchElement, and returns index of first match
+const a = ["a", "b", "a", "b", "a"];
+console.log(a.indexOf("b"));
+
+console.log(a.indexOf("b",2));
+console.log(a.indexOf("z")); // -1 cause "z" was not found
 
 
+// lastIndexOf() - works like indexOf(), but starts at the end and searches backwards
+const c = ["a","b","c","d","a","b"];
+console.log(c.lastIndexOf("b")); // 5
+
+// ITERATIVE METHODS
+ // forEach()
+ // map()
+
+// forEach() executes callback on every item and returns undefined
+const e = ["a","b","c"];
+e.forEach((element) => console.log(element));
+
+
+// map() - return new array of the return value from executing callback on each item
+const a1 = ["a","b","c"];
+const a2 = a1.map((item) => item.toUpperCase());
+console.log(a2);
 
 
 
