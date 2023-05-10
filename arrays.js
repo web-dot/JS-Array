@@ -62,7 +62,7 @@ e.forEach((element) => console.log(element));
 // map() - return new array of the return value from executing callback on each item
 const a1 = ["a","b","c"];
 const a2 = a1.map((item) => item.toUpperCase());
-console.log(a2);
+console.log(a2); // [ 'A', 'B', 'C' ]
 
 
 
