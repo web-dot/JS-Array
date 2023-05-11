@@ -38,6 +38,20 @@ console.log(searchedArray.at(-2), " -> returns d, the second last element");
 let spliceArray = ["1","2","3","4","5"];
 console.log(spliceArray.splice(1,3,"a","b","c","d"));
 
+// reverse() - transposes the elements of array, the first becomes the last, the last becomes first. Returns reference to array
+const toReverse = ["1","2","3","4","5"];
+console.log(toReverse.reverse());
+
+// flat() - returns a new array with all the sub-array elements concatenated into it recursively upto the specified depth
+let toFlat = [1,2,[3,4]];
+toFlat = toFlat.flat();
+console.log(toFlat);
+
+// sort() - sorts the elements in place, returns a reference to the array
+const toSort = ["Wind","Rain","Fire"];
+toSort.sort();
+console.log(toSort); // ["Fire", "Rain", "Wind"]
+
 // indexOf() - searches the array for searchElement, and returns index of first match
 const a = ["a", "b", "a", "b", "a"];
 console.log(a.indexOf("b"));
@@ -64,6 +78,9 @@ const a1 = ["a","b","c"];
 const a2 = a1.map((item) => item.toUpperCase());
 console.log(a2); // [ 'A', 'B', 'C' ]
 
-
+// flatMap() - runs map() followed by a flat() of depth 1
+const a3 = ["a","b","c"];
+const a4 = a3.flatMap((item) => [item.toUpperCase(), item.toLowerCase()]);
+console.log(a4);
 
 
