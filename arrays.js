@@ -149,6 +149,7 @@ console.log(total);
 // 10.indexOf() - searches the array for searchElement, and returns index of first match
 // 11.lastIndexOf() - works like indexOf(), but starts at the end and searches backwards
 
+
 // 12.forEach() executes callback on every item and returns undefined
 // 13.map() - return new array of the return value from executing callback on each item
 // 14.flatMap() - runs map() followed by a flat() of depth 1
