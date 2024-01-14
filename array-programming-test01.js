@@ -46,6 +46,60 @@ const index = animals.findIndex(animal => animal == aquatic)
 console.log("findIndex: ", index);
 
 
+// using find
+
+
+const degreeList = [
+    { degreeId: 1, degreeName: "Bachelor of Science" },
+    { degreeId: 3, degreeName: "Master of Science" }
+    // { degreeId: 2, degreeName: "Bachelor of Arts" },
+]
+
+// using filter()
+// filterDegree will be an array containing the degree if the degree is found.
+// if the length is greater than 0, it means the degree was found
+const degreeToFind = 2;
+const filteredDegrees = degreeList.filter(deg => deg.degreeId === degreeToFind);
+console.log(filteredDegrees);
+if(filteredDegrees.length){
+    const currentDegree = filteredDegrees[0];
+    console.log(currentDegree);
+}
+else{
+    console.log("Degree not found");
+}
+
+
+// using find()
+const foundDegree = degreeList.find(deg => deg.degreeId === degreeToFind);
+if(foundDegree){
+    console.log("Degree Found");
+}
+else{
+    console.log("Degree not found");
+}
+
+
+
+// using indexOf() to splice()
+const mappedRecieptTemplateComponentObject = {
+    templateComponent: ["A", "B", "C", "D", "E"]
+}
+
+const mappedcomp = ["C"];
+
+
+const indexOfC = mappedRecieptTemplateComponentObject.templateComponent.indexOf(mappedcomp[0]);
+console.log(indexOfC);
+if(indexOfC !== -1){
+    mappedRecieptTemplateComponentObject.templateComponent.splice(indexOfC, 1);
+}
+console.log(mappedRecieptTemplateComponentObject.templateComponent);
+
+
+
+
+
 
 
 
