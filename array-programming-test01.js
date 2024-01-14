@@ -32,6 +32,24 @@ console.log(lastTwo);
 const animalsCopy = Array.from(animals);
 console.log("copy", animalsCopy);
 
+// find
+// returns the first element in the provided array that satisfies the provided
+// testing function
+
+const aquatic = "duck";
+const isFound = animals.find(animal => animal === aquatic)
+console.log("find: ", isFound);
+
+
+// findIndex
+const index = animals.findIndex(animal => animal == aquatic)
+console.log("findIndex: ", index);
+
+
+
+
+
+
 
 
 
