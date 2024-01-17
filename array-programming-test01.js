@@ -97,6 +97,64 @@ if(indexOfC !== -1){
 console.log(mappedRecieptTemplateComponentObject.templateComponent);
 
 
+// filter() -> new array containing only the items that match the test
+const food = ["apple", "tea", "bread", "egg", "jam", "butter"];
+const triads = food.filter(item => item.length === 3);
+console.log(triads);
+
+
+
+// map() -> do same thing to each item in array, leaving you with an array containing the changed items
+const nums = [2,5,4,7];
+const doubled = nums.map(number => number * 2);
+console.log(doubled);
+
+// using map() and filter()
+const numbers = [1,2,3,4,5,6,7,8,9,10];
+const squaresOfEvens = numbers
+.filter(number => number % 2 == 0)
+.map(even => even * even);
+console.log("by map-filter ", squaresOfEvens);
+
+// using reduce() in place of map() and filter()
+const squaresOfEvensByReduce = numbers.reduce((accumulator, item) => {
+    if(item % 2 == 0){
+        accumulator.push(item * item);
+    } 
+    return accumulator;
+}, [])
+
+console.log("by reduce ", squaresOfEvensByReduce);
+
+
+// using reduce() and Map to remove duplicates from array
+
+class StudentProfileDto {
+    studentId;
+    candidateId;
+    studentName;
+    studentUsn;
+
+    constructor(studentId, studentName, studentUsn){
+        this.studentId = studentId;
+    }
+}
+
+
+this.coursesOptions = Array.from(
+    this.coursesOptions.reduce((map, course) => {
+        map.set(course.id, course)
+    }, new Map()).values()
+);
+
+// Assuming this.coursesOptions is already defined as an array
+this.coursesOptions = Array.from(
+    this.coursesOptions.reduce(function(map, course) {
+        return map.set(course.id, course);
+    }, new Map()).values()
+);
+
+
 
 
 
